@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655E7816200ED4240024069E /* JRFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E7814200ED4240024069E /* JRFirstViewController.swift */; };
+		655E7817200ED4240024069E /* JRFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655E7815200ED4240024069E /* JRFirstViewController.xib */; };
 		65B825AD200BA60F00C9EE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B825AC200BA60F00C9EE9D /* AppDelegate.swift */; };
 		65B825AF200BA60F00C9EE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B825AE200BA60F00C9EE9D /* ViewController.swift */; };
 		65B825B2200BA60F00C9EE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B825B0200BA60F00C9EE9D /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		655E7814200ED4240024069E /* JRFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRFirstViewController.swift; sourceTree = "<group>"; };
+		655E7815200ED4240024069E /* JRFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRFirstViewController.xib; sourceTree = "<group>"; };
 		65B825A9200BA60F00C9EE9D /* JRSwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRSwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B825AC200BA60F00C9EE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B825AE200BA60F00C9EE9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				65B825AC200BA60F00C9EE9D /* AppDelegate.swift */,
 				65B825AE200BA60F00C9EE9D /* ViewController.swift */,
+				655E7814200ED4240024069E /* JRFirstViewController.swift */,
+				655E7815200ED4240024069E /* JRFirstViewController.xib */,
 				65B825B0200BA60F00C9EE9D /* Main.storyboard */,
 				65B825B3200BA60F00C9EE9D /* Assets.xcassets */,
 				65B825B5200BA60F00C9EE9D /* LaunchScreen.storyboard */,
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B825B7200BA60F00C9EE9D /* LaunchScreen.storyboard in Resources */,
+				655E7817200ED4240024069E /* JRFirstViewController.xib in Resources */,
 				65B825B4200BA60F00C9EE9D /* Assets.xcassets in Resources */,
 				65B825B2200BA60F00C9EE9D /* Main.storyboard in Resources */,
 			);
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B825AF200BA60F00C9EE9D /* ViewController.swift in Sources */,
+				655E7816200ED4240024069E /* JRFirstViewController.swift in Sources */,
 				65B825AD200BA60F00C9EE9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,11 +437,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U532RMG6XX;
 				INFOPLIST_FILE = JRSwiftTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,11 +453,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U532RMG6XX;
 				INFOPLIST_FILE = JRSwiftTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

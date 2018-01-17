@@ -31,6 +31,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func toFirstVC(_ sender: Any) {
+        let firstVC:JRFirstViewController = JRFirstViewController.init(nibName: "JRFirstViewController", bundle: nil);
+        self .present(firstVC, animated: true, completion: nil);
+    }
+    
 }
 
