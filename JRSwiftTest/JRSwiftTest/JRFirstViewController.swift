@@ -63,7 +63,13 @@ class JRFirstViewController: UIViewController {
         var randomNum = "红球：";
         var randomArr = [UInt32](repeating: 0, count: 6);
         for i in 0..<6 {
-            let redNum = arc4random() % 33 + 1;
+            var redNum = arc4random() % 33 + 1;
+            
+            //去掉重复数据
+            while randomArr.contains(redNum) {
+                redNum = arc4random() % 33 + 1;
+            }
+            
             randomArr[i] = redNum;
         }
         //数组升序排序
