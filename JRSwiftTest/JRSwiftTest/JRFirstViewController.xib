@@ -31,10 +31,19 @@
                         <action selector="goback:" destination="-1" eventType="touchUpInside" id="FOg-ww-VdX"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNU-W2-sxq">
+                    <rect key="frame" x="148.5" y="383.5" width="77" height="30"/>
+                    <state key="normal" title="生成随机数"/>
+                    <connections>
+                        <action selector="getRandomNum:" destination="-1" eventType="touchUpInside" id="fk3-V0-78J"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="LNU-W2-sxq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0oH-nh-bPE"/>
                 <constraint firstItem="z5U-66-24T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4dI-XD-mkv"/>
+                <constraint firstItem="LNU-W2-sxq" firstAttribute="top" secondItem="z5U-66-24T" secondAttribute="bottom" constant="30" id="HjA-xQ-btg"/>
                 <constraint firstItem="z5U-66-24T" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tvm-aw-QdI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
