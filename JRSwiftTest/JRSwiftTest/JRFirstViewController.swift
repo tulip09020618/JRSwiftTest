@@ -32,6 +32,7 @@ class JRFirstViewController: UIViewController {
     }
     */
 
+    // MARK: 返回
     @IBAction func goback(_ sender: Any) {
         self .dismiss(animated: true, completion: nil);
     }
@@ -72,10 +73,11 @@ class JRFirstViewController: UIViewController {
             
             randomArr[i] = redNum;
         }
-        //数组升序排序
+        //数组升序排序（尾随闭包）
         randomArr.sort() { (s1, s2) -> Bool in
             return s1 < s2
         };
+//        randomArr.sort {$0 < $1}
         
         for item in randomArr {
             
