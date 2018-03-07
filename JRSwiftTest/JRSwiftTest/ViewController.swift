@@ -107,6 +107,12 @@ class ViewController: UIViewController {
         
         // ARC自动引用计数
         self.arcTest()
+        
+        // Swift与OC混编
+        print("===========Swift与OC混编===========")
+        print("===========Swift调用OC===========")
+        let oc = JROCHello()
+        oc.test()
     }
 
     override func didReceiveMemoryWarning() {

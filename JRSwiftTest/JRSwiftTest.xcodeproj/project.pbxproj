@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		653DC868204F8F630001430D /* JROCHello.m in Sources */ = {isa = PBXBuildFile; fileRef = 653DC867204F8F630001430D /* JROCHello.m */; };
+		653DC86A204F937F0001430D /* JRSwiftHello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DC869204F937F0001430D /* JRSwiftHello.swift */; };
 		655E7816200ED4240024069E /* JRFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E7814200ED4240024069E /* JRFirstViewController.swift */; };
 		655E7817200ED4240024069E /* JRFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655E7815200ED4240024069E /* JRFirstViewController.xib */; };
 		65B825AD200BA60F00C9EE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B825AC200BA60F00C9EE9D /* AppDelegate.swift */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		653DC865204F8F630001430D /* JRSwiftTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JRSwiftTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		653DC866204F8F630001430D /* JROCHello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JROCHello.h; sourceTree = "<group>"; };
+		653DC867204F8F630001430D /* JROCHello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JROCHello.m; sourceTree = "<group>"; };
+		653DC869204F937F0001430D /* JRSwiftHello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRSwiftHello.swift; sourceTree = "<group>"; };
 		655E7814200ED4240024069E /* JRFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRFirstViewController.swift; sourceTree = "<group>"; };
 		655E7815200ED4240024069E /* JRFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRFirstViewController.xib; sourceTree = "<group>"; };
 		65B825A9200BA60F00C9EE9D /* JRSwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRSwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,12 +109,16 @@
 			children = (
 				65B825AC200BA60F00C9EE9D /* AppDelegate.swift */,
 				65B825AE200BA60F00C9EE9D /* ViewController.swift */,
+				653DC866204F8F630001430D /* JROCHello.h */,
+				653DC867204F8F630001430D /* JROCHello.m */,
+				653DC869204F937F0001430D /* JRSwiftHello.swift */,
 				655E7814200ED4240024069E /* JRFirstViewController.swift */,
 				655E7815200ED4240024069E /* JRFirstViewController.xib */,
 				65B825B0200BA60F00C9EE9D /* Main.storyboard */,
 				65B825B3200BA60F00C9EE9D /* Assets.xcassets */,
 				65B825B5200BA60F00C9EE9D /* LaunchScreen.storyboard */,
 				65B825B8200BA60F00C9EE9D /* Info.plist */,
+				653DC865204F8F630001430D /* JRSwiftTest-Bridging-Header.h */,
 			);
 			path = JRSwiftTest;
 			sourceTree = "<group>";
@@ -193,12 +203,14 @@
 		65B825A1200BA60F00C9EE9D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JR;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = tulip;
 				TargetAttributes = {
 					65B825A8200BA60F00C9EE9D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					65B825BC200BA61000C9EE9D = {
@@ -266,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653DC86A204F937F0001430D /* JRSwiftHello.swift in Sources */,
+				653DC868204F8F630001430D /* JROCHello.m in Sources */,
 				65B825AF200BA60F00C9EE9D /* ViewController.swift in Sources */,
 				655E7816200ED4240024069E /* JRFirstViewController.swift in Sources */,
 				65B825AD200BA60F00C9EE9D /* AppDelegate.swift in Sources */,
@@ -434,13 +448,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = U532RMG6XX;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = JRSwiftTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JRSwiftTest/JRSwiftTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -450,13 +469,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = U532RMG6XX;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = JRSwiftTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tulip.JRSwiftTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JRSwiftTest/JRSwiftTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
