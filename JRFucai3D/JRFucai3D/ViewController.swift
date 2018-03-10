@@ -25,8 +25,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         // 创建tableView
-        tableView = UITableView(frame: CGRect(x: 0,y : 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), style: UITableViewStyle.plain);
+        tableView = UITableView(frame: CGRect(x: 0,y : 20, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-20), style: UITableViewStyle.plain);
         self.view.addSubview(tableView);
+        tableView.backgroundColor = UIColor.red
         
         // 设置代理
         tableView.delegate = self
@@ -34,6 +35,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // 去掉无数据行的显示
         tableView.tableFooterView = UIView()
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        }else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		65128A2F2053734B00021297 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A2E2053734B00021297 /* Help.swift */; };
+		65128A322053F23400021297 /* JRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A302053F23400021297 /* JRHomeViewController.swift */; };
+		65128A332053F23400021297 /* JRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65128A312053F23400021297 /* JRHomeViewController.xib */; };
+		65128A362053F8F200021297 /* JRQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A342053F8F200021297 /* JRQueryViewController.swift */; };
+		65128A372053F8F200021297 /* JRQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65128A352053F8F200021297 /* JRQueryViewController.xib */; };
+		65128A3A2053FA7600021297 /* JRPredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A382053FA7600021297 /* JRPredictionViewController.swift */; };
+		65128A3B2053FA7600021297 /* JRPredictionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65128A392053FA7600021297 /* JRPredictionViewController.xib */; };
 		6579BE282051205400136BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6579BE272051205400136BF6 /* AppDelegate.swift */; };
 		6579BE2A2051205400136BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6579BE292051205400136BF6 /* ViewController.swift */; };
 		6579BE2D2051205400136BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6579BE2B2051205400136BF6 /* Main.storyboard */; };
@@ -36,6 +42,12 @@
 
 /* Begin PBXFileReference section */
 		65128A2E2053734B00021297 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		65128A302053F23400021297 /* JRHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRHomeViewController.swift; sourceTree = "<group>"; };
+		65128A312053F23400021297 /* JRHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRHomeViewController.xib; sourceTree = "<group>"; };
+		65128A342053F8F200021297 /* JRQueryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRQueryViewController.swift; sourceTree = "<group>"; };
+		65128A352053F8F200021297 /* JRQueryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRQueryViewController.xib; sourceTree = "<group>"; };
+		65128A382053FA7600021297 /* JRPredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRPredictionViewController.swift; sourceTree = "<group>"; };
+		65128A392053FA7600021297 /* JRPredictionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRPredictionViewController.xib; sourceTree = "<group>"; };
 		6579BE242051205400136BF6 /* JRFucai3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRFucai3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6579BE272051205400136BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6579BE292051205400136BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				6579BE272051205400136BF6 /* AppDelegate.swift */,
+				65128A302053F23400021297 /* JRHomeViewController.swift */,
+				65128A312053F23400021297 /* JRHomeViewController.xib */,
+				65128A342053F8F200021297 /* JRQueryViewController.swift */,
+				65128A352053F8F200021297 /* JRQueryViewController.xib */,
+				65128A382053FA7600021297 /* JRPredictionViewController.swift */,
+				65128A392053FA7600021297 /* JRPredictionViewController.xib */,
 				6579BE292051205400136BF6 /* ViewController.swift */,
 				6579BE2B2051205400136BF6 /* Main.storyboard */,
 				6579BE2E2051205400136BF6 /* Assets.xcassets */,
@@ -237,6 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6579BE322051205400136BF6 /* LaunchScreen.storyboard in Resources */,
+				65128A3B2053FA7600021297 /* JRPredictionViewController.xib in Resources */,
+				65128A332053F23400021297 /* JRHomeViewController.xib in Resources */,
+				65128A372053F8F200021297 /* JRQueryViewController.xib in Resources */,
 				6579BE2F2051205400136BF6 /* Assets.xcassets in Resources */,
 				6579BE2D2051205400136BF6 /* Main.storyboard in Resources */,
 			);
@@ -264,8 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6579BE2A2051205400136BF6 /* ViewController.swift in Sources */,
+				65128A322053F23400021297 /* JRHomeViewController.swift in Sources */,
+				65128A3A2053FA7600021297 /* JRPredictionViewController.swift in Sources */,
 				6579BE282051205400136BF6 /* AppDelegate.swift in Sources */,
 				65128A2F2053734B00021297 /* Help.swift in Sources */,
+				65128A362053F8F200021297 /* JRQueryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

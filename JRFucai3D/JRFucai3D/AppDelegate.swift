@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let vc = JRHomeViewController(nibName: "JRHomeViewController", bundle: nil)
+        // 添加导航控制器
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
+        
+        
         return true
     }
 
