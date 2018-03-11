@@ -91,7 +91,6 @@ class JRPredictionViewController: UIViewController {
             return
         }
         
-        var queryResult = ""
         var queryArr: Array<Array<String>>! = [Array<String>]()
         for i in 0..<data.count {
             let dataDic = data[i]
@@ -113,11 +112,58 @@ class JRPredictionViewController: UIViewController {
                 predict = predictWithDouble(opencode: opencode)
             }
             
-            queryResult.append("\n时间：\(opentime)，号码：\(opencode)，预测：\(predict)")
             queryArr.append([opentime, opencode, predict])
         }
         
-        showMessage(title: "开奖结果\(data.count)", message: queryResult, okTitle: "确定", vc: self)
+        // 处理预测（向前移动一位）
+        var queryResult = ""
+        var nextPredict = "" // 下期预测结果
+        var count1 = 0 // 猜中一个数的次数
+        var count2 = 0 // 猜中两个数的次数
+        var count3 = 0 // 猜中三个数的次数
+        for i in 0..<queryArr.count {
+            var currentArr = queryArr[i]
+            if i == 0 {
+                // 第一个即为下期预测结果
+                nextPredict = currentArr[2]
+                queryResult.append("下期预测：\(nextPredict)")
+            }else {
+                // 预测结果前移
+                var lastArr = queryArr[i-1]
+                lastArr[2] = currentArr[2]
+                
+                let winCount = isWin(result: lastArr[1], predict: lastArr[2])
+                var winStr = "否"
+                if winCount == 1 {
+                    winStr = "中"
+                    count1 += 1
+                }else if winCount == 2 {
+                    winStr = "中"
+                    count2 += 1
+                }else if winCount == 3 {
+                    winStr = "中"
+                    count3 += 1
+                }
+                queryResult.append("\n\(lastArr[0]): \(lastArr[1])，预：\(lastArr[2])，奖：\(winStr)")
+                
+                // 处理最后一个数组
+                if i == queryArr.count - 1 {
+                    currentArr[2] = "-"
+                    queryResult.append("\n\(currentArr[0]): \(currentArr[1])，预测：\(currentArr[2])，奖：-")
+                }
+            }
+        }
+        
+        if predictType == PREDICTION_TYPE.PREDICTION_TYPE_DOUBLE {
+            queryResult.append("\n猜中1个数：\(count1)次，中奖概率：\(String(format: "%.2f", Double(count1)/19.0*100))%")
+            queryResult.append("\n猜中2个数：\(count2)次，中奖概率：\(String(format: "%.2f", Double(count2)/19.0*100))%")
+            queryResult.append("\n猜中3个数：\(count3)次，中奖概率：\(String(format: "%.2f", Double(count3)/19.0*100))%")
+        }
+        
+        // 总中奖次数
+        let totalCount = count1 + count2 + count3
+        
+        showMessage(title: "开奖结果\(String(format: "%.2f", Double(totalCount)/19.0*100))%", message: queryResult, okTitle: "确定", vc: self)
         print(queryResult)
         
     }
@@ -180,6 +226,31 @@ class JRPredictionViewController: UIViewController {
             return "-"
         }
         return "\(numArr[numArr.count-3]),\(numArr[numArr.count-2]),\(numArr[numArr.count-1])"
+    }
+    
+    // MARK: 判断是否中奖
+    func isWin(result: String?, predict: String?) -> Int {
+        if result == nil || predict == nil {
+            print("数据有问题")
+            return 0
+        }
+        
+        if predict! == "_" {
+            print("最后一期，无法预测")
+            return 0
+        }
+        
+        let arr = predict?.split(separator: ",")
+        var count = 0
+        for i in 0..<arr!.count {
+            let p = arr![i]
+            let index = result!.index(of: Character(String(p)))
+            if index != nil {
+                count += 1
+            }
+        }
+        
+        return count
     }
     
 }
