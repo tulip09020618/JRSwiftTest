@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5869F277DE92585ABC9DC162 /* Pods_JRFucai3D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D854DF6727A0DDA5FD9B29 /* Pods_JRFucai3D.framework */; };
 		65128A2F2053734B00021297 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A2E2053734B00021297 /* Help.swift */; };
 		65128A322053F23400021297 /* JRHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65128A302053F23400021297 /* JRHomeViewController.swift */; };
 		65128A332053F23400021297 /* JRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65128A312053F23400021297 /* JRHomeViewController.xib */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34D854DF6727A0DDA5FD9B29 /* Pods_JRFucai3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JRFucai3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4481709C08197EE05B4119C5 /* Pods-JRFucai3D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRFucai3D.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JRFucai3D/Pods-JRFucai3D.debug.xcconfig"; sourceTree = "<group>"; };
 		65128A2E2053734B00021297 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		65128A302053F23400021297 /* JRHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRHomeViewController.swift; sourceTree = "<group>"; };
 		65128A312053F23400021297 /* JRHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JRHomeViewController.xib; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		6579BE432051205500136BF6 /* JRFucai3DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JRFucai3DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6579BE472051205500136BF6 /* JRFucai3DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRFucai3DUITests.swift; sourceTree = "<group>"; };
 		6579BE492051205500136BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21EC907D9D9BAEC857C52A1 /* Pods-JRFucai3D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JRFucai3D.release.xcconfig"; path = "Pods/Target Support Files/Pods-JRFucai3D/Pods-JRFucai3D.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5869F277DE92585ABC9DC162 /* Pods_JRFucai3D.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,8 @@
 				6579BE3B2051205500136BF6 /* JRFucai3DTests */,
 				6579BE462051205500136BF6 /* JRFucai3DUITests */,
 				6579BE252051205400136BF6 /* Products */,
+				9575734B5D602B2F796185D9 /* Pods */,
+				E82D7DFA8E56FD1D488FC47E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +153,23 @@
 			path = JRFucai3DUITests;
 			sourceTree = "<group>";
 		};
+		9575734B5D602B2F796185D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4481709C08197EE05B4119C5 /* Pods-JRFucai3D.debug.xcconfig */,
+				B21EC907D9D9BAEC857C52A1 /* Pods-JRFucai3D.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E82D7DFA8E56FD1D488FC47E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D854DF6727A0DDA5FD9B29 /* Pods_JRFucai3D.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6579BE4C2051205500136BF6 /* Build configuration list for PBXNativeTarget "JRFucai3D" */;
 			buildPhases = (
+				B90C0C83C5C207DF308AB9F7 /* [CP] Check Pods Manifest.lock */,
 				6579BE202051205400136BF6 /* Sources */,
 				6579BE212051205400136BF6 /* Frameworks */,
 				6579BE222051205400136BF6 /* Resources */,
+				FC85557E7C56B158352F8175 /* [CP] Embed Pods Frameworks */,
+				DF5D25822D3A204BF6FD8EBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +305,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B90C0C83C5C207DF308AB9F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JRFucai3D-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF5D25822D3A204BF6FD8EBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JRFucai3D/Pods-JRFucai3D-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC85557E7C56B158352F8175 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JRFucai3D/Pods-JRFucai3D-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JRFucai3D/Pods-JRFucai3D-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6579BE202051205400136BF6 /* Sources */ = {
@@ -453,6 +534,7 @@
 		};
 		6579BE4D2051205500136BF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4481709C08197EE05B4119C5 /* Pods-JRFucai3D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +550,7 @@
 		};
 		6579BE4E2051205500136BF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B21EC907D9D9BAEC857C52A1 /* Pods-JRFucai3D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

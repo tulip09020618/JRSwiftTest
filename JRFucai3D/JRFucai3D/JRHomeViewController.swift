@@ -85,10 +85,12 @@ class JRHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             // 独胆预测
             let onlyPredictionVC = JRPredictionViewController(nibName: "JRPredictionViewController", bundle: nil)
             onlyPredictionVC.title = dataSource[indexPath.row]
+            onlyPredictionVC.predictType = PREDICTION_TYPE.PREDICTION_TYPE_ONLE
             self.navigationController?.pushViewController(onlyPredictionVC, animated: true)
         }else if indexPath.row == 2 {
             let doublePredictionVC = JRPredictionViewController(nibName: "JRPredictionViewController", bundle: nil)
             doublePredictionVC.title = dataSource[indexPath.row]
+            doublePredictionVC.predictType = PREDICTION_TYPE.PREDICTION_TYPE_DOUBLE
             self.navigationController?.pushViewController(doublePredictionVC, animated: true)
         }
     }

@@ -8,12 +8,26 @@
 
 import UIKit
 
+enum PREDICTION_TYPE: Int {
+    case PREDICTION_TYPE_ONLE // 独胆
+    case PREDICTION_TYPE_DOUBLE // 双胆
+}
+
 class JRPredictionViewController: UIViewController {
+    
+    // 预测类型
+    var predictType: PREDICTION_TYPE!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if predictType == PREDICTION_TYPE.PREDICTION_TYPE_ONLE {
+            print("独胆")
+        }else {
+            print("双胆")
+        }
     }
 
     override func didReceiveMemoryWarning() {
