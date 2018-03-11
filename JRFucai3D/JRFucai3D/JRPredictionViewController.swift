@@ -16,6 +16,8 @@ enum PREDICTION_TYPE: Int {
 
 class JRPredictionViewController: UIViewController {
     
+    @IBOutlet weak var textView: UITextView!
+    
     // 预测类型
     var predictType: PREDICTION_TYPE!
 
@@ -23,12 +25,6 @@ class JRPredictionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if predictType == PREDICTION_TYPE.PREDICTION_TYPE_ONLE {
-            print("独胆")
-        }else {
-            print("双胆")
-        }
         
         // 查询最近20期开奖结果
         queryData(20)
@@ -144,26 +140,29 @@ class JRPredictionViewController: UIViewController {
                     winStr = "中"
                     count3 += 1
                 }
-                queryResult.append("\n\(lastArr[0]): \(lastArr[1])，预：\(lastArr[2])，奖：\(winStr)")
+                queryResult.append("\n\(lastArr[0]): \(lastArr[1])\t预：\(lastArr[2])\t奖：\(winStr)")
                 
                 // 处理最后一个数组
                 if i == queryArr.count - 1 {
                     currentArr[2] = "-"
-                    queryResult.append("\n\(currentArr[0]): \(currentArr[1])，预测：\(currentArr[2])，奖：-")
+                    queryResult.append("\n\(currentArr[0]): \(currentArr[1])\t预：\(currentArr[2])\t奖：-")
                 }
             }
         }
         
         if predictType == PREDICTION_TYPE.PREDICTION_TYPE_DOUBLE {
-            queryResult.append("\n猜中1个数：\(count1)次，中奖概率：\(String(format: "%.2f", Double(count1)/19.0*100))%")
-            queryResult.append("\n猜中2个数：\(count2)次，中奖概率：\(String(format: "%.2f", Double(count2)/19.0*100))%")
-            queryResult.append("\n猜中3个数：\(count3)次，中奖概率：\(String(format: "%.2f", Double(count3)/19.0*100))%")
+            queryResult.append("\n猜中1个：\(count1)次\t中奖概率：\(String(format: "%.2f", Double(count1)/19.0*100))%")
+            queryResult.append("\n猜中2个：\(count2)次\t中奖概率：\(String(format: "%.2f", Double(count2)/19.0*100))%")
+            queryResult.append("\n猜中3个：\(count3)次\t中奖概率：\(String(format: "%.2f", Double(count3)/19.0*100))%")
         }
         
         // 总中奖次数
         let totalCount = count1 + count2 + count3
         
-        showMessage(title: "开奖结果\(String(format: "%.2f", Double(totalCount)/19.0*100))%", message: queryResult, okTitle: "确定", vc: self)
+//        showMessage(title: "开奖结果\(String(format: "%.2f", Double(totalCount)/19.0*100))%", message: queryResult, okTitle: "确定", vc: self)
+        
+        queryResult = "开奖结果\n中奖概率：\(String(format: "%.2f", Double(totalCount)/19.0*100))%\n" + queryResult
+        textView.text = queryResult
         print(queryResult)
         
     }
@@ -172,7 +171,7 @@ class JRPredictionViewController: UIViewController {
     func predictWithOnly(opencode: String) -> String {
         let arr = opencode.split(separator: ",")
         if arr.count != 3 {
-            print("解析错误")
+            showMessage(title: "独胆预测", message: "解析错误", okTitle: "确定", vc: self)
             return "-"
         }
         
@@ -195,7 +194,7 @@ class JRPredictionViewController: UIViewController {
         
         let arr = opencode.split(separator: ",")
         if arr.count != 3 {
-            print("解析错误")
+            showMessage(title: "胆码预测", message: "解析错误", okTitle: "确定", vc: self)
             return "-"
         }
         
@@ -232,6 +231,7 @@ class JRPredictionViewController: UIViewController {
     func isWin(result: String?, predict: String?) -> Int {
         if result == nil || predict == nil {
             print("数据有问题")
+            showMessage(title: "胆码预测", message: "数据有问题", okTitle: "确定", vc: self)
             return 0
         }
         
